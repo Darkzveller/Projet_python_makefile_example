@@ -1,0 +1,61 @@
+"""
+=========================================================
+Guide rapide : Activation et désactivation de l'environnement Python local (.venv)
+=========================================================
+
+🧱 Objectif :
+Permettre de travailler sur ce projet avec un environnement Python isolé
+(ici basé sur Python 3.10), pour éviter les conflits avec le Python global.
+
+---------------------------------------------------------
+0️⃣ Vérifier les versions de Python installées
+---------------------------------------------------------
+- Lister toutes les versions installées et la version par défaut :
+    py --list
+- L'étoile (*) indique la version utilisée par défaut par le lanceur py.
+
+---------------------------------------------------------
+1️⃣ Activer l'environnement virtuel
+---------------------------------------------------------
+- Ouvrir PowerShell ou un terminal dans le dossier du projet :
+    cd "C:\Users\<UTILISATEUR>\Documents\VisualStudioCode\Python_project\translate_webtoon"
+
+- Activer l'environnement :
+    .venv\Scripts\Activate
+
+- Vérifier que l'environnement est actif :
+    Le terminal affiche le préfixe :
+    (.venv) PS C:\Users\<UTILISATEUR>\Documents\VisualStudioCode\Python_project\translate_webtoon>
+
+- Vérifier la version de Python utilisée :
+    python --version
+    (doit afficher Python 3.10.x)
+
+---------------------------------------------------------
+2️⃣ Installer ou mettre à jour les dépendances
+---------------------------------------------------------
+- Mettre à jour pip, setuptools et wheel :
+    python -m pip install --upgrade pip setuptools wheel
+
+- Installer les dépendances du projet :
+    pip install -r requirements.txt
+
+---------------------------------------------------------
+3️⃣ Désactiver l'environnement virtuel
+---------------------------------------------------------
+- Quand tu as fini de travailler ou veux revenir à Python global :
+    deactivate
+
+- Vérifier que l'environnement est désactivé :
+    Le préfixe (.venv) a disparu du terminal.
+    python --version
+    (affiche la version globale du système)
+
+---------------------------------------------------------
+✅ Notes :
+- Chaque projet peut avoir son propre environnement virtuel.
+- Il est recommandé d'activer l'environnement avant toute modification des dépendances.
+- Pour réactiver, simplement refaire :
+    .venv\Scripts\Activate
+=========================================================
+"""
